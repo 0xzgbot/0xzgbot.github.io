@@ -241,7 +241,7 @@ section { padding: 80px 48px; position: relative; }
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 24px;
 }
 .project-card {
   display: grid;
@@ -249,7 +249,9 @@ section { padding: 80px 48px; position: relative; }
   min-height: 480px;
   border: 1px solid var(--border-light);
   background: var(--card-bg);
+  border-radius: var(--radius);
   overflow: hidden;
+  isolation: isolate;
 }
 .project-card:hover { box-shadow: var(--card-hover-shadow); z-index: 2; }
 .project-card:nth-child(even) .project-visual { order: 1; }
