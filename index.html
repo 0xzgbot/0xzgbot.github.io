@@ -353,6 +353,19 @@ section { padding: 80px 48px; position: relative; }
   object-fit: cover;
   display: block;
 }
+.project-visual.is-diagram {
+  background: #f4f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.project-visual.is-diagram img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
 
 .viz {
   width: 100%;
@@ -511,6 +524,31 @@ section { padding: 80px 48px; position: relative; }
   vertical-align: text-bottom;
   margin-left: 2px;
 }
+.viz-chat {
+  background: #0d1117;
+  color: #c9d1d9;
+  padding: 28px;
+  justify-content: space-between;
+  box-shadow: var(--card-shadow);
+}
+.viz-chat .viz-kicker { color: #93c5fd; }
+.chat-line {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.chat-line span {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8b949e;
+  margin-bottom: 4px;
+}
+.chat-line.you { color: #e6edf3; }
+.chat-line.bot { color: #79c0ff; }
+.viz-chat .viz-foot { color: #6b7785; margin-top: 12px; }
 
 /* ── Photography ── */
 .photography-section { background: #0b0c10; color: #fff; }
@@ -1043,19 +1081,85 @@ footer {
           </a>
         </div>
       </div>
+      <div class="project-visual is-diagram">
+        <img src="0xzgbot-portfolio-images/topo2stl-pipeline-web.jpg" alt="Pipeline from topographic map to 3D terrain, STL, 3D print, and bronze cast" width="1024" height="682" loading="lazy">
+      </div>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-info">
+        <div class="project-number">09 <span class="wip">Private · soon</span></div>
+        <h3 class="project-name">Record Weight Designer</h3>
+        <p class="project-tagline">Pick a place on a map. Get a record weight with that mountain on it.</p>
+        <p class="project-desc">
+          Search a name or drop a pin. Real elevation comes in, you crop the terrain, and a 75 mm
+          puck shows up in bronze in a 3D preview. Stretch it, spin it, export an STL for a resin
+          master or a sand mold. Still private. Releasing soon.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">JavaScript</span>
+          <span class="stack-tag">Map</span>
+          <span class="stack-tag">Elevation</span>
+          <span class="stack-tag">STL</span>
+          <span class="stack-tag">Bronze</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/0xzgbot/topo-record-weight-designer" target="_blank" rel="noopener noreferrer" class="project-link">
+            View on GitHub
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/><path d="M11 3H5"/></svg>
+          </a>
+        </div>
+      </div>
       <div class="project-visual is-panel">
-        <div class="viz viz-topo" aria-hidden="true">
-          <div class="viz-kicker">Height map → printable mesh</div>
-          <svg viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 180 C 70 170, 90 140, 140 130 S 220 150, 260 110 S 340 70, 380 90" stroke="#3b82f6" stroke-width="1.4"/>
-            <path d="M20 160 C 80 155, 100 120, 150 112 S 230 135, 270 95 S 345 55, 380 75" stroke="#60a5fa" stroke-width="1.2" opacity="0.85"/>
-            <path d="M20 140 C 85 138, 110 105, 160 98 S 240 118, 280 82 S 350 48, 380 62" stroke="#93c5fd" stroke-width="1.1" opacity="0.7"/>
-            <path d="M40 120 C 95 118, 125 92, 175 88 S 250 100, 295 72 S 355 42, 380 52" stroke="#bfdbfe" stroke-width="1" opacity="0.55"/>
-            <path d="M80 100 C 130 96, 155 80, 195 78 S 265 88, 310 64 S 360 40, 380 46" stroke="#dbeafe" stroke-width="0.9" opacity="0.45"/>
-            <circle cx="260" cy="110" r="3" fill="#3b82f6"/>
-            <circle cx="175" cy="88" r="2.5" fill="#93c5fd"/>
-          </svg>
-          <div class="viz-foot">map data → print file → mold → bronze</div>
+        <div class="viz viz-cast" aria-hidden="true">
+          <div class="viz-kicker">Record weight · still in progress</div>
+          <div class="viz-steps">
+            <div class="viz-step">01<strong>Place</strong></div>
+            <div class="viz-step">02<strong>Preview</strong></div>
+            <div class="viz-step">03<strong>STL</strong></div>
+          </div>
+          <div class="viz-metrics">
+            <div>Size<b>75 mm</b></div>
+            <div>Material<b>Bronze</b></div>
+            <div>Data<b>Elevation</b></div>
+            <div>Export<b>STL</b></div>
+          </div>
+          <div class="viz-foot">map → relief → printable puck · releasing soon</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-info">
+        <div class="project-number">10 <span class="wip">Private · soon</span></div>
+        <h3 class="project-name">Relay Mobile</h3>
+        <p class="project-tagline">My first app. Talk to a local model from your phone.</p>
+        <p class="project-desc">
+          One HTML file. Point it at LM Studio on a computer in the house, or reach it over Tailscale.
+          Answers stream in as they generate. Nothing is uploaded. No build step, no app store.
+          Open the file and talk.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">HTML</span>
+          <span class="stack-tag">LM Studio</span>
+          <span class="stack-tag">Local LLM</span>
+          <span class="stack-tag">Tailscale</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/0xzgbot/turboquant-mobile" target="_blank" rel="noopener noreferrer" class="project-link">
+            View on GitHub
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/><path d="M11 3H5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-visual is-panel">
+        <div class="viz viz-chat" aria-hidden="true">
+          <div class="viz-kicker">First app · LM Studio</div>
+          <div>
+            <div class="chat-line you"><span>You</span>Load Qwen on this machine.</div>
+            <div class="chat-line bot"><span>Local model</span>Connected · 192.168.1.12:1234. Streaming.</div>
+          </div>
+          <div class="viz-foot">one HTML file · nothing uploaded</div>
         </div>
       </div>
     </article>
