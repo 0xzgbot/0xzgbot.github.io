@@ -366,6 +366,20 @@ section { padding: 80px 48px; position: relative; }
   object-fit: contain;
   object-position: center;
 }
+.project-visual.is-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+}
+.project-visual.is-icon img {
+  width: min(100%, 360px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 28px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+}
 
 .viz {
   width: 100%;
@@ -1039,22 +1053,8 @@ footer {
           </a>
         </div>
       </div>
-      <div class="project-visual is-panel">
-        <div class="viz viz-cast" aria-hidden="true">
-          <div class="viz-kicker">Quote flow · still in progress</div>
-          <div class="viz-steps">
-            <div class="viz-step">01<strong>Model</strong></div>
-            <div class="viz-step">02<strong>Simulate</strong></div>
-            <div class="viz-step">03<strong>Quote</strong></div>
-          </div>
-          <div class="viz-metrics">
-            <div>Volume<b>cm³</b></div>
-            <div>Surface<b>cm²</b></div>
-            <div>Material<b>Bronze</b></div>
-            <div>Price<b>Instant</b></div>
-          </div>
-          <div class="viz-foot">model → simulate → price · releasing soon</div>
-        </div>
+      <div class="project-visual is-icon">
+        <img src="0xzgbot-portfolio-images/sculptcast-app-web.jpg" alt="SculptCast app icon showing a wireframe 3D model casting into bronze" width="1024" height="1024" loading="lazy">
       </div>
     </article>
 
