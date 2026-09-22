@@ -380,6 +380,17 @@ section { padding: 80px 48px; position: relative; }
   border-radius: 28px;
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
 }
+.project-visual.is-contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-visual.is-contain img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
 
 .viz {
   width: 100%;
@@ -1110,22 +1121,8 @@ footer {
           </a>
         </div>
       </div>
-      <div class="project-visual is-panel">
-        <div class="viz viz-cast" aria-hidden="true">
-          <div class="viz-kicker">Record weight · still in progress</div>
-          <div class="viz-steps">
-            <div class="viz-step">01<strong>Place</strong></div>
-            <div class="viz-step">02<strong>Preview</strong></div>
-            <div class="viz-step">03<strong>STL</strong></div>
-          </div>
-          <div class="viz-metrics">
-            <div>Size<b>75 mm</b></div>
-            <div>Material<b>Bronze</b></div>
-            <div>Data<b>Elevation</b></div>
-            <div>Export<b>STL</b></div>
-          </div>
-          <div class="viz-foot">map → relief → printable puck · releasing soon</div>
-        </div>
+      <div class="project-visual is-contain">
+        <img src="0xzgbot-portfolio-images/record-weight-bronze-web.jpg" alt="Bronze topographic record weights with mountain relief on a dark surface" width="1024" height="768" loading="lazy">
       </div>
     </article>
 
@@ -1213,7 +1210,7 @@ footer {
       View on GitHub
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/><path d="M11 3H5"/></svg>
     </a>
-    <a href="mailto:tmophoto@mac.com" class="btn btn-secondary">Get in Touch</a>
+    <a href="mailto:hello@0xzgbot.dev" class="btn btn-secondary">Get in Touch</a>
   </div>
 </section>
 
@@ -1225,7 +1222,7 @@ footer {
     <a href="https://github.com/0xzgbot/VectorPilot" target="_blank" rel="noopener noreferrer">VectorPilot</a>
     <a href="https://github.com/0xzgbot/forge-nps-v01" target="_blank" rel="noopener noreferrer">Cinesmith</a>
     <a href="https://tmophoto.com" target="_blank" rel="noopener noreferrer">tmophoto</a>
-    <a href="mailto:tmophoto@mac.com">Email</a>
+    <a href="mailto:hello@0xzgbot.dev">Email</a>
   </div>
 </footer>
 
