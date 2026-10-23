@@ -1059,7 +1059,39 @@ footer {
 
     <article class="project-card reveal">
       <div class="project-info">
-        <div class="project-number">06 <span class="wip">Private · soon</span></div>
+        <div class="project-number">06</div>
+        <h3 class="project-name">Hermes Trellis</h3>
+        <p class="project-tagline">One photo in, a printable STL out. The GPU is in the next room.</p>
+        <p class="project-desc">
+          A plugin for Hermes Agent. Hand it a picture and Trellis.2 builds the 3D model on the DGX Spark
+          through ComfyUI. The Mac pulls the model back, writes the STL, and checks the byte count against
+          the face count before it calls the file done. Four solid views come back so you can look at it
+          before you slice. No cloud API, no subscription. Not an official Nous release, and I say so in
+          the README.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">TypeScript</span>
+          <span class="stack-tag">MCP</span>
+          <span class="stack-tag">ComfyUI</span>
+          <span class="stack-tag">Trellis.2</span>
+          <span class="stack-tag">trimesh</span>
+          <span class="stack-tag">DGX Spark</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/0xzgbot/hermes-trellis" target="_blank" rel="noopener noreferrer" class="project-link">
+            View on GitHub
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/><path d="M11 3H5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-visual is-contain">
+        <img src="0xzgbot-portfolio-images/hermes-trellis-web.jpg" alt="A photo of a robed statue becoming a wireframe 3D mesh, then a grey print on a 3D printer bed" width="1280" height="720" loading="lazy">
+      </div>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-info">
+        <div class="project-number">07 <span class="wip">Private · soon</span></div>
         <h3 class="project-name">Made From Fire</h3>
         <p class="project-tagline">Bronze objects shaped like real mountains. You can feel the terrain.</p>
         <p class="project-desc">
@@ -1091,7 +1123,7 @@ footer {
 
     <article class="project-card reveal">
       <div class="project-info">
-        <div class="project-number">07 <span class="wip">Private · soon</span></div>
+        <div class="project-number">08 <span class="wip">Private · soon</span></div>
         <h3 class="project-name">Casting Simulator</h3>
         <p class="project-tagline">Load an STL, lay out gating, run the pour in 3D before you melt metal.</p>
         <p class="project-desc">
@@ -1121,7 +1153,33 @@ footer {
 
     <article class="project-card reveal">
       <div class="project-info">
-        <div class="project-number">08 <span class="wip">Private · soon</span></div>
+        <div class="project-number">09 <span class="wip">Private · soon</span></div>
+        <h3 class="project-name">MatchPlates</h3>
+        <p class="project-tagline">Split a pattern in two and mount it on a plate, without guessing at draft.</p>
+        <p class="project-desc">
+          Load the STL of the part you want to cast. It picks a parting plane, cuts the model into two
+          halves, and checks every face for draft. Faces that would drag sand on the way out turn red.
+          Then it pulls each half out of the mold in a simulation to prove it clears, builds the plate
+          between them with clamp holes, and exports STL and DXF. If the part fails, the report says FAIL.
+          Still private. Releasing soon.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">trimesh</span>
+          <span class="stack-tag">FastAPI</span>
+          <span class="stack-tag">Three.js</span>
+          <span class="stack-tag">STL</span>
+          <span class="stack-tag">DXF</span>
+        </div>
+      </div>
+      <div class="project-visual is-contain">
+        <img src="0xzgbot-portfolio-images/matchplates-web.jpg" alt="A cast part split by a blue parting plane with a red and green draft heat map, beside a matchplate with clamp holes" width="1280" height="720" loading="lazy">
+      </div>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-info">
+        <div class="project-number">10 <span class="wip">Private · soon</span></div>
         <h3 class="project-name">SculptCast</h3>
         <p class="project-tagline">Upload a 3D model, see how it would cast, get a price.</p>
         <p class="project-desc">
@@ -1149,7 +1207,7 @@ footer {
 
     <article class="project-card reveal">
       <div class="project-info">
-        <div class="project-number">09 <span class="wip">Private · soon</span></div>
+        <div class="project-number">11 <span class="wip">Private · soon</span></div>
         <h3 class="project-name">topo2stl</h3>
         <p class="project-tagline">Turn real terrain into a file you can 3D-print.</p>
         <p class="project-desc">
@@ -1177,7 +1235,7 @@ footer {
 
     <article class="project-card reveal">
       <div class="project-info">
-        <div class="project-number">10 <span class="wip">Private · soon</span></div>
+        <div class="project-number">12 <span class="wip">Private · soon</span></div>
         <h3 class="project-name">Record Weight Designer</h3>
         <p class="project-tagline">Pick a place on a map. Get a record weight with that mountain on it.</p>
         <p class="project-desc">
@@ -1206,7 +1264,7 @@ footer {
 
     <article class="project-card reveal">
       <div class="project-info">
-        <div class="project-number">11 <span class="wip">Private · soon</span></div>
+        <div class="project-number">13 <span class="wip">Private · soon</span></div>
         <h3 class="project-name">Relay Mobile</h3>
         <p class="project-tagline">My first app. Talk to a local model from your phone.</p>
         <p class="project-desc">
