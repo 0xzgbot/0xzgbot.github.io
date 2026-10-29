@@ -352,6 +352,40 @@ section { padding: 80px 48px; position: relative; }
 }
 .project-link:hover { gap: 10px; }
 .project-link svg { width: 16px; height: 16px; }
+.project-link-cta {
+  padding: 14px 28px;
+  background: #f1641e;
+  color: #fff !important;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 20px rgba(241, 100, 30, 0.35);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.project-link-cta:hover {
+  background: #d8560f;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(241, 100, 30, 0.45);
+}
+.project-link-cta svg { width: 18px; height: 18px; flex-shrink: 0; }
+.project-link-secondary {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+.project-link-secondary:hover { color: var(--accent); }
+.project-desc a.etsy-inline {
+  color: #f1641e;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.project-desc a.etsy-inline:hover { color: #d8560f; }
 .project-note {
   font-family: var(--mono);
   font-size: 12px;
@@ -885,6 +919,37 @@ footer {
     <article class="project-card reveal">
       <div class="project-info">
         <div class="project-number">01</div>
+        <h3 class="project-name">Made From Fire</h3>
+        <p class="project-tagline">Bronze objects shaped like real mountains. You can feel the terrain.</p>
+        <p class="project-desc">
+          Start with real elevation data: peaks, coasts, river valleys. Turn it into a 3D print, make a
+          mold, pour bronze. You end up holding a map. Pieces are in the
+          <a href="https://www.etsy.com/shop/MadeFromFire" target="_blank" rel="noopener noreferrer" class="etsy-inline">Made From Fire Etsy shop</a>.
+          The source repo stays private until the shop tooling is ready to open.
+        </p>
+        <div class="project-stack">
+          <span class="stack-tag">Metal Casting</span>
+          <span class="stack-tag">Bronze</span>
+          <span class="stack-tag">Topography</span>
+          <span class="stack-tag">3D Print</span>
+          <span class="stack-tag">Etsy</span>
+        </div>
+        <div class="project-links">
+          <a href="https://www.etsy.com/shop/MadeFromFire" target="_blank" rel="noopener noreferrer" class="project-link-cta">
+            Shop on Etsy
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/><path d="M11 3H5"/></svg>
+          </a>
+          <a href="https://github.com/0xzgbot/made-from-fire" target="_blank" rel="noopener noreferrer" class="project-link-secondary">Source on GitHub ↗</a>
+        </div>
+      </div>
+      <div class="project-visual">
+        <img src="0xzgbot-portfolio-images/made-from-fire-web.jpg" alt="Bronze topographic sculpture on a wooden base" width="1400" height="933" loading="eager">
+      </div>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-info">
+        <div class="project-number">02</div>
         <h3 class="project-name">ShopPilot</h3>
         <p class="project-tagline">A Mac app that designs the cut, shows you the cut, then runs the mill.</p>
         <p class="project-desc">
@@ -907,13 +972,13 @@ footer {
         </div>
       </div>
       <div class="project-visual">
-        <img src="0xzgbot-portfolio-images/shoppilot-cut-web.jpg" alt="Illustrative photo of a CNC mill cutting a pocket in aluminum" width="1400" height="933" loading="eager">
+        <img src="0xzgbot-portfolio-images/shoppilot-cut-web.jpg" alt="Illustrative photo of a CNC mill cutting a pocket in aluminum" width="1400" height="933" loading="lazy">
       </div>
     </article>
 
     <article class="project-card reveal">
       <div class="project-info">
-        <div class="project-number">02</div>
+        <div class="project-number">03</div>
         <h3 class="project-name">VectorPilot</h3>
         <p class="project-tagline">The same CNC app, built for Windows.</p>
         <p class="project-desc">
@@ -942,7 +1007,7 @@ footer {
 
     <article class="project-card reveal">
       <div class="project-info">
-        <div class="project-number">03</div>
+        <div class="project-number">04</div>
         <h3 class="project-name">Cinesmith</h3>
         <p class="project-tagline">A movie crew that lives on computers in the room. Idea in, frames out.</p>
         <p class="project-desc">
@@ -973,7 +1038,7 @@ footer {
 
     <article class="project-card reveal">
       <div class="project-info">
-        <div class="project-number">04</div>
+        <div class="project-number">05</div>
         <h3 class="project-name">Hermes Media Skill Pack</h3>
         <p class="project-tagline">138 playbooks that teach an AI how a camera crew thinks.</p>
         <p class="project-desc">
@@ -1019,7 +1084,7 @@ footer {
 
     <article class="project-card reveal">
       <div class="project-info">
-        <div class="project-number">05</div>
+        <div class="project-number">06</div>
         <h3 class="project-name">Hermes ComfyUI Skills</h3>
         <p class="project-tagline">Five commands that load a full picture-and-video playbook on your own hardware.</p>
         <p class="project-desc">
@@ -1059,7 +1124,7 @@ footer {
 
     <article class="project-card reveal">
       <div class="project-info">
-        <div class="project-number">06</div>
+        <div class="project-number">07</div>
         <h3 class="project-name">Hermes Trellis</h3>
         <p class="project-tagline">One photo in, a printable STL out. The GPU is in the next room.</p>
         <p class="project-desc">
@@ -1085,38 +1150,6 @@ footer {
       </div>
       <div class="project-visual is-contain">
         <img src="0xzgbot-portfolio-images/hermes-trellis-web.jpg" alt="A photo of a robed statue becoming a wireframe 3D mesh, then a grey print on a 3D printer bed" width="1280" height="720" loading="lazy">
-      </div>
-    </article>
-
-    <article class="project-card reveal">
-      <div class="project-info">
-        <div class="project-number">07 <span class="wip">Private · soon</span></div>
-        <h3 class="project-name">Made From Fire</h3>
-        <p class="project-tagline">Bronze objects shaped like real mountains. You can feel the terrain.</p>
-        <p class="project-desc">
-          Start with real elevation data: peaks, coasts, river valleys. Turn it into a 3D print, make a
-          mold, pour bronze. You end up holding a map. Sold on Etsy. The source is still private until
-          the shop work is ready to open.
-        </p>
-        <div class="project-stack">
-          <span class="stack-tag">Metal Casting</span>
-          <span class="stack-tag">Bronze</span>
-          <span class="stack-tag">Topography</span>
-          <span class="stack-tag">3D Print</span>
-        </div>
-        <div class="project-links">
-          <a href="https://www.etsy.com/shop/MadeFromFire" target="_blank" rel="noopener noreferrer" class="project-link">
-            Visit Etsy shop
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/><path d="M11 3H5"/></svg>
-          </a>
-          <a href="https://github.com/0xzgbot/made-from-fire" target="_blank" rel="noopener noreferrer" class="project-link">
-            GitHub
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l5 5-5 5"/><path d="M11 3H5"/></svg>
-          </a>
-        </div>
-      </div>
-      <div class="project-visual">
-        <img src="0xzgbot-portfolio-images/made-from-fire-web.jpg" alt="Bronze topographic sculpture on a wooden base" width="1400" height="933" loading="lazy">
       </div>
     </article>
 
@@ -1356,6 +1389,7 @@ footer {
     <a href="https://github.com/0xzgbot/ShopPilot" target="_blank" rel="noopener noreferrer">ShopPilot</a>
     <a href="https://github.com/0xzgbot/VectorPilot" target="_blank" rel="noopener noreferrer">VectorPilot</a>
     <a href="https://github.com/0xzgbot/forge-nps-v01" target="_blank" rel="noopener noreferrer">Cinesmith</a>
+    <a href="https://www.etsy.com/shop/MadeFromFire" target="_blank" rel="noopener noreferrer">Made From Fire · Etsy</a>
     <a href="https://github.com/0xzgbot/sand_casting_v2" target="_blank" rel="noopener noreferrer">Casting Simulator</a>
     <a href="https://tmophoto.com" target="_blank" rel="noopener noreferrer">tmophoto</a>
     <a href="mailto:hello@0xzgbot.dev">Email</a>
