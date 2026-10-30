@@ -920,12 +920,12 @@ footer {
       <div class="project-info">
         <div class="project-number">01</div>
         <h3 class="project-name">Made From Fire</h3>
-        <p class="project-tagline">Bronze objects shaped like real mountains. You can feel the terrain.</p>
+        <p class="project-tagline">Bronze topographic sculptures cast from real elevation data.</p>
         <p class="project-desc">
-          Start with real elevation data: peaks, coasts, river valleys. Turn it into a 3D print, make a
-          mold, pour bronze. You end up holding a map. Pieces are in the
+          Real-world DEM → 3D-printed pattern → mold → bronze. Peaks, coastlines, and valleys you
+          can pick up like a relief map—not a render. Finished pieces ship from the
           <a href="https://madefromfire.etsy.com" target="_blank" rel="noopener noreferrer" class="etsy-inline">Made From Fire Etsy shop</a>.
-          The source repo stays private until the shop tooling is ready to open.
+          Production tooling repo stays private for now.
         </p>
         <div class="project-stack">
           <span class="stack-tag">Metal Casting</span>
@@ -951,11 +951,11 @@ footer {
       <div class="project-info">
         <div class="project-number">02</div>
         <h3 class="project-name">ShopPilot</h3>
-        <p class="project-tagline">A Mac app that designs the cut, shows you the cut, then runs the mill.</p>
+        <p class="project-tagline">Mac CNC app: toolpaths, cut preview, G-code to GRBL/FluidNC.</p>
         <p class="project-desc">
-          Draw the shape, the app figures out the toolpaths, you watch a preview of material getting
-          carved away, then you send it to the machine. It will not run just because a file opened.
-          Forty-seven checks look at the G-code before anything moves.
+          Draw or import geometry, generate pockets/contours/3D finishing paths, preview material
+          removal, then post to your mill. Forty-seven automated checks run on the G-code before
+          the machine is allowed to start.
         </p>
         <div class="project-stack">
           <span class="stack-tag">SwiftUI</span>
@@ -980,11 +980,11 @@ footer {
       <div class="project-info">
         <div class="project-number">03</div>
         <h3 class="project-name">VectorPilot</h3>
-        <p class="project-tagline">The same CNC app, built for Windows.</p>
+        <p class="project-tagline">Windows CNC app—same projects and pipeline as ShopPilot.</p>
         <p class="project-desc">
-          Same project files as ShopPilot, same pipeline, different OS. Bring in DXF, SVG, STL, and more.
-          Thirty-plus ways to cut: pockets, v-carves, 3D finish. Every push runs tests so a toolpath
-          that used to work still works.
+          Import DXF, SVG, STL, and more; build toolpaths with the same operations as the Mac app;
+          preview cuts in DirectX; send G-code to your controller. Opens ShopPilot project files.
+          CI runs the full test suite on every push.
         </p>
         <div class="project-stack">
           <span class="stack-tag">C#</span>
@@ -1009,13 +1009,12 @@ footer {
       <div class="project-info">
         <div class="project-number">04</div>
         <h3 class="project-name">Cinesmith</h3>
-        <p class="project-tagline">A movie crew that lives on computers in the room. Idea in, frames out.</p>
+        <p class="project-tagline">Local GPU pipeline: story in → script, frames, and video out.</p>
         <p class="project-desc">
-          You write the idea. A helper writes the script, plans the shots, writes the prompts for the
-          stills, renders them, checks them, and remembers what worked — then sends them to get rendered
-          into videos. Script to video pipeline. Characters stay consistent without sending faces to the
-          cloud. It keeps a log of what was sent, what failed, and what finally passed. Hardware in the
-          shop: a DGX Spark plus two 3090s.
+          FastAPI orchestration plus Hermes Agent and ComfyUI on shop hardware (DGX Spark, 3090s):
+          expand a premise into script and shot list, generate stills and clips, vision-check each
+          frame, and keep character look consistent without sending faces to the cloud. Full run log
+          of prompts, failures, and passes.
         </p>
         <div class="project-stack">
           <span class="stack-tag">Python</span>
@@ -1040,11 +1039,11 @@ footer {
       <div class="project-info">
         <div class="project-number">05</div>
         <h3 class="project-name">Hermes Media Skill Pack</h3>
-        <p class="project-tagline">138 playbooks that teach an AI how a camera crew thinks.</p>
+        <p class="project-tagline">138 Markdown skills for AI-driven film, image, and video work.</p>
         <p class="project-desc">
-          Each skill is a file a helper can load: how a lens looks, how light should fall, how to keep a
-          character the same from shot to shot, how a director tends to frame. It’s craft written down
-          so the helper can use a method, not just a vibe.
+          Hermes-loadable files grouped by job: lens and lighting choices, shot continuity, director
+          framing habits, prompt templates, and model-specific notes for LTX, FLUX, and Wan. Structured
+          craft rules an agent can follow step by step.
         </p>
         <div class="project-stack">
           <span class="stack-tag">Python</span>
@@ -1086,12 +1085,11 @@ footer {
       <div class="project-info">
         <div class="project-number">06</div>
         <h3 class="project-name">Hermes ComfyUI Skills</h3>
-        <p class="project-tagline">Five commands that load a full picture-and-video playbook on your own hardware.</p>
+        <p class="project-tagline">Five slash commands to run local ComfyUI image/video with QA.</p>
         <p class="project-desc">
-          Type one slash command and the helper loads a whole set of skills at once: prompting, stills,
-          video, local shop, overnight batches. After every render, a vision check has to look at the
-          frame and approve it. The generator saying “done” is not a pass. It runs on machines in the
-          room first. Cloud is only backup. It can keep rendering overnight on a schedule.
+          `/comfyui-*` commands load the media skill pack, queue Flux/LTX jobs on GPUs in the room,
+          and require a vision model to approve each frame—“done” from the generator is not enough.
+          Includes batch/cron for overnight renders; cloud is fallback only.
         </p>
         <div class="project-stack">
           <span class="stack-tag">YAML</span>
@@ -1126,12 +1124,11 @@ footer {
       <div class="project-info">
         <div class="project-number">07</div>
         <h3 class="project-name">Hermes Trellis</h3>
-        <p class="project-tagline">One photo in, a printable STL out. The GPU is in the next room.</p>
+        <p class="project-tagline">Hermes MCP: one photo → validated STL via Trellis.2 on local ComfyUI.</p>
         <p class="project-desc">
-          A plugin for Hermes Agent. Hand it a picture and Trellis.2 builds the 3D model on the DGX Spark
-          through ComfyUI. The Mac pulls the model back, writes the STL, and checks the byte count against
-          the face count before it calls the file done. Four solid views come back so you can look at it
-          before you slice. No cloud API, no subscription.
+          Send a reference image; Trellis.2 reconstructs mesh on the DGX through ComfyUI; the plugin
+          validates topology, writes STL, and returns four orthographic views before you slice. No
+          hosted 3D API or subscription.
         </p>
         <div class="project-stack">
           <span class="stack-tag">TypeScript</span>
@@ -1157,12 +1154,11 @@ footer {
       <div class="project-info">
         <div class="project-number">08 <span class="wip">Private · soon</span></div>
         <h3 class="project-name">Casting Simulator</h3>
-        <p class="project-tagline">Load an STL, lay out gating, run the pour in 3D before you melt metal.</p>
+        <p class="project-tagline">Desktop pour simulator for sand molds and ceramic shell from STL.</p>
         <p class="project-desc">
-          A desktop foundry tool for hobbyists and small shops. Import a part, set up sand molds or
-          ceramic shell, add sprues and runners, pick bronze or aluminum, and simulate fill and
-          solidification in a real-time viewer. Estimates fill time, flags thin walls and cold shuts,
-          and saves sessions — before you pour for real.
+          Import a casting STL, choose mold type, lay out sprues/runners, pick bronze or aluminum, and
+          watch fill and solidification in 3D. Estimates pour time and flags thin sections and cold
+          shuts. Save and reload sessions before you melt metal. Still private. Releasing soon.
         </p>
         <div class="project-stack">
           <span class="stack-tag">Python</span>
@@ -1187,13 +1183,11 @@ footer {
       <div class="project-info">
         <div class="project-number">09 <span class="wip">Private · soon</span></div>
         <h3 class="project-name">MatchPlates</h3>
-        <p class="project-tagline">Split a pattern in two and mount it on a plate, without guessing at draft.</p>
+        <p class="project-tagline">Matchplate generator: parting, draft check, and plate export from STL.</p>
         <p class="project-desc">
-          Load the STL of the part you want to cast. It picks a parting plane, cuts the model into two
-          halves, and checks every face for draft. Faces that would drag sand on the way out turn red.
-          Then it pulls each half out of the mold in a simulation to prove it clears, builds the plate
-          between them with clamp holes, and exports STL and DXF. If the part fails, the report says FAIL.
-          Still private. Releasing soon.
+          Load a castable STL; auto-suggest a parting plane; split into cope/drag patterns; heat-map
+          faces that violate draft; simulate pattern draw to prove release; build a bolted matchplate
+          and export pattern STLs plus plate DXF. Explicit pass/fail report. Still private. Releasing soon.
         </p>
         <div class="project-stack">
           <span class="stack-tag">Python</span>
@@ -1242,11 +1236,11 @@ footer {
       <div class="project-info">
         <div class="project-number">11 <span class="wip">Private · soon</span></div>
         <h3 class="project-name">topo2stl</h3>
-        <p class="project-tagline">Turn real terrain into a file you can 3D-print.</p>
+        <p class="project-tagline">Elevation tiles → printable terrain STL for print, mold, or cast.</p>
         <p class="project-desc">
-          Public elevation data in, printable model out. Mountains and coastlines become physical
-          terrain. That file is the first step toward a mold and a bronze cast. Still private.
-          Releasing soon.
+          Select a map bounds, pull public DEM data, mesh with chosen scale and vertical exaggeration,
+          and export a watertight STL. Feeds the print → mold → bronze workflow used in Made From Fire.
+          Still private. Releasing soon.
         </p>
         <div class="project-stack">
           <span class="stack-tag">Python</span>
@@ -1270,11 +1264,11 @@ footer {
       <div class="project-info">
         <div class="project-number">12 <span class="wip">Private · soon</span></div>
         <h3 class="project-name">Record Weight Designer</h3>
-        <p class="project-tagline">Pick a place on a map. Get a record weight with that mountain on it.</p>
+        <p class="project-tagline">Map-based designer for 75 mm bronze topo record-weight STLs.</p>
         <p class="project-desc">
-          Search a name or drop a pin. Real elevation comes in, you crop the terrain, and a 75 mm
-          puck shows up in bronze in a 3D preview. Stretch it, spin it, export an STL for a resin
-          master or a sand mold. Still private. Releasing soon.
+          Search a place or drop a pin, crop elevation into a puck, preview relief in the browser,
+          tweak scale and rotation, export STL for resin printing or sand casting a weighted disc.
+          Still private. Releasing soon.
         </p>
         <div class="project-stack">
           <span class="stack-tag">JavaScript</span>
@@ -1299,11 +1293,11 @@ footer {
       <div class="project-info">
         <div class="project-number">13 <span class="wip">Private · soon</span></div>
         <h3 class="project-name">Relay Mobile</h3>
-        <p class="project-tagline">My first app. Talk to a local model from your phone.</p>
+        <p class="project-tagline">Mobile web chat UI for a local LM Studio server on your network.</p>
         <p class="project-desc">
-          One HTML file. Point it at LM Studio on a computer in the house, or reach it over Tailscale.
-          Answers stream in as they generate. Nothing is uploaded. No build step, no app store.
-          Open the file and talk.
+          One static HTML page: point at LM Studio on your LAN or over Tailscale, stream replies on
+          your phone. No build, no app store, no third-party inference—traffic stays on your machines.
+          Still private. Releasing soon.
         </p>
         <div class="project-stack">
           <span class="stack-tag">HTML</span>
